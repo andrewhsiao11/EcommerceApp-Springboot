@@ -30,7 +30,7 @@ public class CartController {
 
     @ModelAttribute("loggedInUser")
     public User loggedInUser() {
-        return userService.getLoggeedInUser();
+        return userService.getLoggedInUser();
     }
 
     @ModelAttribute("cart")

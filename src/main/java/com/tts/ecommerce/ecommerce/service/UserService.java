@@ -34,12 +34,12 @@ public class UserService implements UserDetailsService {
         userRepository.save(user);
     }
 
-    public User getLoggeedInUser() {
+    public User getLoggedInUser() {
         return findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
     }
 
     public void updateCart(Map<Product, Integer> cart) {
-        User user = getLoggeedInUser();
+        User user = getLoggedInUser();
         user.setCart(cart);
         saveExisting(user);
     }
