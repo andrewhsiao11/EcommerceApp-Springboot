@@ -21,9 +21,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class StripeService {
     @Autowired
-      UserService userService;
+    UserService userService;
 
-      @Value("${STRIPE_SECRET_KEY}")
+    @Value("${STRIPE_SECRET_KEY}")
     private String secretKey;
     
     @PostConstruct
